@@ -56,6 +56,10 @@ class LogViewerServiceProvider extends PackageServiceProvider
         $this->publishConfig();
         $this->publishViews();
         $this->publishTranslations();
+//dd($this->getBasePath().DS.'src/Http/Routes/log-viwer.php'." | ". base_path('routes/log-viewer.php'));
+        $this->publishes([
+            $this->getBasePath().DS.'src/Http/Routes/log-viewer.php' => base_path('routes/log-viewer.php'),
+        ]);
     }
 
     /**
